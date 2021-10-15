@@ -306,94 +306,43 @@ public class SignupDefination {
   			System.out.println("User unable to navigates to the customer details  page" +e);
   			Assert.fail();
   			}
-         
      }
+    	 @Then("user Check the Payment Address and Shipping Address")
+    	 public void user_Check_the_Payment_Address_and_Shipping_Address() {
 
-     @Then("user click on customer name")
-     public void user_click_on_customer_name() {
          try {
-        	 driver.findElement(By.xpath("//a[text()='abc def']")).click();
-   			System.out.println("User able click on customer name");
-   			Thread.sleep(2000);
-        	 
+        	 driver.findElement(By.xpath("//tr/td[contains(text(), 'Payment Address')]"));
+        	 driver.findElement(By.xpath("//tr/td[contains(text(), 'Shipping Address')]"));
+      		 System.out.println("User able check the payment address and shipping address");
+      		 Thread.sleep(2000);
          }
          catch(Exception e) {
-        	 System.out.println("User unable click on customer name" +e);
+        	 System.out.println("User unable check the payment address and shipping address");
         	 Assert.fail();
-        	 
-         }
-     }
-
-     @Then("user navigates to the General page")
-     public void user_navigates_to_the_General_page() {
-         try {
-        	 
-        	 driver.findElement(By.xpath("//*[@class=\"active\"]")).click();
-    	     System.out.println("User able navigates to the General page");
-    		 Thread.sleep(2000);
-        	  }
-         catch(Exception e) {
-        		System.out.println("User unable navigates to the General page" +e);
-        		 Assert.fail();
-        		 }
-     }
-     
-     @When("user Enter {string} and {string} in the fields")
-     public void user_Enter_and_in_the_fields(String password, String cpassword) {
-    	 try {
-    		 driver.findElement(By.xpath("//*[@class=\"form-control\"]")).sendKeys(password);
-    		 driver.findElement(By.xpath("//*[@class=\"form-control\"]")).sendKeys(cpassword);
-    		// driver.findElement(By.id("input-confirm")).sendKeys(cpassword);
-    		 System.out.println("User able to enter password and cpassword in the blank fields");
-    		 Thread.sleep(2000);
-         	 }
-    	 catch(Exception e) {
-    		 System.out.println("User able to enter password and cpassword in the blank fields" +e);
-    		 Assert.fail();
-    		  }
-    	  }
-
-     @Then("user click on save button")
-     public void user_click_on_save_button() {
-    	 try {
-    		 driver.findElement(By.xpath("//*[@class=\"btn btn-primary\"]")).click();
-    	     System.out.println("User able click on the save button");
-    		 Thread.sleep(2000);
-    		 }
-    	 catch(Exception e) {
-    		 System.out.println("User  not able click on the save button" +e);
-    		 Assert.fail();
-    		  }
-          }
-
-     @Then("user navigates to the customers page")
-     public void user_navigates_to_the_customers_page() {
-    	 
-    	 try {
-    		String expectedtitle = "Orders";
- 			String actualTitle =driver.getTitle();
- 			Assert.assertEquals(expectedtitle, actualTitle);
-    		System.out.println("User able Navigates to the Customers page");
-			Thread.sleep(2000);
-    	 }
-    	 catch(Exception e) {
-    			System.out.println("User unable Navigates to the Customers page");
-    			Assert.fail();
-    		 }
-    	 
+      		 
+        	 }
 }
-     @Then("user click on  the continue button")
-     public void user_click_on_the_continue_button() {
-    	 try {
-    			driver.findElement(By.xpath("//*[@class=\"btn btn-primary\"]")).click();
-    			System.out.println("User able click on continue button");
-    			}
-    			catch(Exception e) {
-    				System.out.println("User unable to click on continue button" +e);
-    				Assert.fail();
-    				}
+
+    	 @Then("user Check product, Model, Quantity, unit price and Total Price")
+    	 public void user_Check_product_Model_Quantity_unit_price_and_Total_Price() throws InterruptedException {
+    		 try {
+    		 driver.findElement(By.xpath("//tr/td[contains(text(), 'Product')]"));
+        	 driver.findElement(By.xpath("//tr/td[contains(text(), 'Model')]"));
+        	 driver.findElement(By.xpath("//tr/td[contains(text(), 'Quantity')]"));
+        	 driver.findElement(By.xpath("//tr/td[contains(text(), 'Unit Price')]"));
+        	 driver.findElement(By.xpath("//tr/td[contains(text(), 'Total')]"));
+        	 System.out.println("User able check the product,model,Quality,unit price and Total price");
+        	 Thread.sleep(2000);
+        	 }
+    	 catch(Exception e) {
+    		 System.out.println("User unable check the product,model,Quality,unit price and Total price");
+    		 Assert.fail();
+    		 }
+   }
          
-     }
+     
+
+   
      @Given("user click on Edit button")
      public void user_click_on_Edit_button() {
          try{
@@ -464,6 +413,67 @@ public class SignupDefination {
   			Assert.fail();
   			}
      }
+     @Given("User is on Orders page of uniform store Application")
+     public void user_is_on_Orders_page_of_uniform_store_Application() {
+    	 try {
+ 			String expectedtitle = "Orders";
+  			String actualTitle =driver.getTitle();
+  			Assert.assertEquals(expectedtitle, actualTitle);
+ 	    	//driver.findElement(By.xpath("//a[text()='Orders']")).click();
+ 	    	System.out.println("User able on the orders page of uniform store website");
+ 	    }
+ 	    catch(Exception e) {
+ 	    	System.out.println("User unable to on the orders page of uniform store website" +e);
+ 	    	Assert.fail();
+ 	    	
+ 	    }
+          }
+     @When("User  Click On dashboard Button")
+     public void user_Click_On_dashboard_Button() {
+    	 try {
+           	driver.findElement(By.xpath("//*[@class=\"fa fa-dashboard fa-fw\"]")).click();
+         	    System.out.println("User able click on dashboard button");
+         	    Thread.sleep(3000);
+           		 }
+           	 catch(Exception e) {
+           		System.out.println("User unable to click on dashboard button" +e);
+           		Assert.fail();
+           		  }
+         
+     }
+     @Then("user navigates to the dashboard page")
+     public void user_navigates_to_the_dashboard_page() {
+    	 try {
+   			Thread.sleep(3000);
+   			String expectedtitle = "Dashboard";
+   			String actualTitle =driver.getTitle();
+   			Assert.assertEquals(expectedtitle, actualTitle);
+   			System.out.println("User is on the Dashboard page");
+   		}
+   		catch(Exception e) {
+   			System.out.println("User unable  on  the dashboard page" +e);
+   			Assert.fail();
+   			}
+       }
+     @When("user Click on the sales button")
+     public void user_Click_on_the_sales_button() {
+    	 try {
+ 			driver.findElement(By.xpath("//*[@class=\"fa fa-shopping-cart fa-fw\"]")).click();
+ 			System.out.println("User able to click on Sales button");
+ 			
+ 		}
+ 		catch(Exception e) {
+ 			System.out.println("User unable to click on Sales" +e);
+ 			Assert.fail();
+ 			
+ 		}
+         
+     }
+
+
+
+     
+     
      @Then("User click on the  recurring Order button under the sales Module")
      public void user_click_on_the_recurring_Order_button_under_the_sales_Module() {
     	 try {
@@ -830,20 +840,20 @@ public class SignupDefination {
             		Assert.fail();
             		  }
  }
-     @Given("User is on Dashboard page")
-     public void user_is_on_Dashboard_page() {
+     @Given("User click on dashboard button")
+     public void user_click_on_dashboard_button() {
     	 try {
- 			Thread.sleep(3000);
- 			String expectedtitle = "Orders";
- 			String actualTitle =driver.getTitle();
- 			Assert.assertEquals(expectedtitle, actualTitle);
- 			System.out.println("User is on the Dashboard page");
- 		}
- 		catch(Exception e) {
- 			System.out.println("User unable  on  the dashboard page" +e);
- 			Assert.fail();
- 			}
-         }
+          	driver.findElement(By.xpath("//*[@class=\"fa fa-dashboard fa-fw\"]")).click();
+        	    System.out.println("User able click on dashboard button");
+        	    Thread.sleep(3000);
+          		 }
+          	 catch(Exception e) {
+          		System.out.println("User unable to click on dashboard button" +e);
+          		Assert.fail();
+          		  }
+         
+     }
+   
 
      @When("User click on View more of Total Orders box")
      public void user_click_on_View_more_of_Total_Orders_box() {
@@ -1029,7 +1039,7 @@ public class SignupDefination {
      @Then("User  click on Processing orders button")
      public void user_click_on_Processing_orders_button() {
     	 try {
-            	driver.findElement(By.xpath("//span[text()='259']")).click();
+            	driver.findElement(By.xpath("//span[text()='257']")).click();
           	    System.out.println("User able to click on processing orders button");
           	    Thread.sleep(3000);
             		 }
@@ -1249,8 +1259,68 @@ public class SignupDefination {
     		 System.out.println("User  unable to returned in main page" +e);
     		 }
     	 
+        }
+     @Given("User click on add new button")
+     public void user_click_on_add_new_button() {
+    	 try {
+ 			
+    			driver.findElement(By.xpath("//*[@class=\"fa fa-plus\"]")).click();
+    			System.out.println("User able to click on add new button");
+    			}
+    			catch(Exception e) {
+    				System.out.println("User unable to click on Add new button" +e);
+    				Assert.fail();
+    				}
          
      }
+
+     @Then("user enter {string} in the field")
+     public void user_enter_in_the_field(String Telephone) {
+    	 try {
+ 			
+ 			driver.findElement(By.id("input-telephone")).sendKeys(Telephone);
+ 			System.out.println("User able Enter Telephone number");
+ 			Assert.fail();
+ 		}
+ 		catch(Exception e) {
+ 			System.out.println("User unable to enter Telephone number" +e);
+ 		
+ 			}
+         
+     }
+
+     @When("user click on continue Button")
+     public void user_click_on_continue_Button() {
+    	 try {
+    			driver.findElement(By.xpath("//*[@class=\"btn btn-primary\"]")).click();
+    			System.out.println("User able click on continue button");
+    			}
+    			catch(Exception e) {
+    				System.out.println("User unable to click on continue button" +e);
+    				Assert.fail();
+    				}
+         
+     }
+
+     @Then("user navigates to the add products page")
+     public void user_navigates_to_the_add_products_page() {
+    	 try {
+      		driver.findElement(By.xpath("//a[text()='2. Products']")).click();
+   			System.out.println("User able Navigates to the Add products page");
+   		}
+   		catch(Exception e) {
+   			System.out.println("User unable to navigates to the add products page" +e);
+   			Assert.fail();
+   			}
+
+
+     }
+
+
+
+    
+
+
 
 
 

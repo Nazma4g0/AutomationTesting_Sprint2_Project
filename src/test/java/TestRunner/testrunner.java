@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 plugin = { "pretty","html:target/cucumber-pretty","json:target/report.xml","json:target/jsonreport.json"}
 //tags = {"@Recurring-11"} 
 
-      
+       
       )
 
 public class testrunner {

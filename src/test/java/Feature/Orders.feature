@@ -1,4 +1,4 @@
-Feature: Orders feature
+ Feature: Orders feature
 
   Background: Verify  Login Functionality
     Given User is on Uniform Store Application
@@ -40,19 +40,11 @@ Feature: Orders feature
       | @#$5      | 678@trf  | email@domain.com    | !@#$%0000  |
 
   @View-3
-  Scenario Outline: Verify View Action button
+  Scenario: Verify View Action button
     Given User click on view button
     Then user navigates to the customer details page
-    And user click on customer name
-    Then user navigates to the General page
-    When user Enter "<password>" and "<cpassword>" in the fields
-    Then user click on save button
-    Then user navigates to the customers page
-    And user click on  the continue button
-
-    Examples: 
-      | password | cpassword |
-      | nauzz123 | nauzz123  |
+    And user Check the Payment Address and Shipping Address
+    And user Check product, Model, Quantity, unit price and Total Price
 
   @Edit-4
   Scenario Outline: Verify Edit Action button
@@ -95,7 +87,7 @@ Feature: Orders feature
 
   @Dashboard-8
   Scenario: Verify Dashboard page
-    Given User is on Dashboard page
+    Given User click on dashboard button
     When User click on View more of Total Orders box
     Then User Navigates to the Orders Page
     When User Click on Dashboard button
@@ -133,13 +125,28 @@ Feature: Orders feature
     And User click on OK in alert message to delete the row
     Then Selected row deleted Sucessfully
 
-  @Recurring-11
+  @Bug
+  Scenario Outline: Verify Telephone in Add button page
+    Given User click on add new button
+    Then user navigates to the customer details page
+    And user enter "<Telephone>" in the field
+    When user click on continue Button
+    Then user navigates to the add products page
+
+    Examples: 
+      | Telephone    |
+      | tyd563fygr   |
+      | ASDGRUTJY#$  |
+      | 0000000etxdt |
+      
+      
+      @Recurring-11
   Scenario Outline: Verify Recurring orders Login Functionality
-    Given User is on Uniform Store Application
-    When user enter username and password
-    And Click on Login button
-    Then User Navigates to the Dashboard
-    When User click on Sales button
+    Given User is on Orders page of uniform store Application
+    When  User  Click On dashboard Button
+    Then  user navigates to the dashboard page
+    And   User Navigates to the Dashboard
+    When user Click on the sales button
     Then User click on the  recurring Order button under the sales Module
     And User is on Recurring orders Page
     When User Enter "<RecurringID>" in  Recurring Id Field
@@ -153,3 +160,4 @@ Feature: Orders feature
     Examples: 
       | RecurringID | orderID | PaymentReference       | customer | status  | added      |
       |         543 |     543 | T210928456289627498378 | nazma    | Pending | 2019-09-15 |
+      

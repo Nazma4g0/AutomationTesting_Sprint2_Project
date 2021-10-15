@@ -1038,67 +1038,6 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.scenarioOutline({
-  "name": "Verify View Action button",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@View-3"
-    }
-  ]
-});
-formatter.step({
-  "name": "User click on view button",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "user navigates to the customer details page",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user click on customer name",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "user navigates to the General page",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user Enter \"\u003cpassword\u003e\" and \"\u003ccpassword\u003e\" in the fields",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "user click on save button",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user navigates to the customers page",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "user click on  the continue button",
-  "keyword": "And "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "password",
-        "cpassword"
-      ]
-    },
-    {
-      "cells": [
-        "nauzz123",
-        "nauzz123"
-      ]
-    }
-  ]
-});
 formatter.background({
   "name": "Verify  Login Functionality",
   "description": "",
@@ -1170,7 +1109,7 @@ formatter.result({
 formatter.scenario({
   "name": "Verify View Action button",
   "description": "",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
       "name": "@View-3"
@@ -1198,65 +1137,24 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user click on customer name",
+  "name": "user Check the Payment Address and Shipping Address",
   "keyword": "And "
 });
 formatter.match({
-  "location": "SignupDefination.user_click_on_customer_name()"
+  "location": "SignupDefination.user_Check_the_Payment_Address_and_Shipping_Address()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefination.SignupDefination.user_click_on_customer_name(SignupDefination.java:322)\r\n\tat ✽.user click on customer name(file:src/test/java/Feature/Orders.feature:46)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "user navigates to the General page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SignupDefination.user_navigates_to_the_General_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user Enter \"nauzz123\" and \"nauzz123\" in the fields",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "SignupDefination.user_Enter_and_in_the_fields(String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user click on save button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SignupDefination.user_click_on_save_button()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user navigates to the customers page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "SignupDefination.user_navigates_to_the_customers_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "user click on  the continue button",
+  "name": "user Check product, Model, Quantity, unit price and Total Price",
   "keyword": "And "
 });
 formatter.match({
-  "location": "SignupDefination.user_click_on_the_continue_button()"
+  "location": "SignupDefination.user_Check_product_Model_Quantity_unit_price_and_Total_Price()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
@@ -1947,11 +1845,11 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "User is on Dashboard page",
+  "name": "User click on dashboard button",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "SignupDefination.user_is_on_Dashboard_page()"
+  "location": "SignupDefination.user_click_on_dashboard_button()"
 });
 formatter.result({
   "status": "passed"
@@ -1964,8 +1862,7 @@ formatter.match({
   "location": "SignupDefination.user_click_on_View_more_of_Total_Orders_box()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefination.SignupDefination.user_click_on_View_more_of_Total_Orders_box(SignupDefination.java:857)\r\n\tat ✽.User click on View more of Total Orders box(file:src/test/java/Feature/Orders.feature:99)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "User Navigates to the Orders Page",
@@ -1975,7 +1872,7 @@ formatter.match({
   "location": "SignupDefination.user_Navigates_to_the_Orders_Page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User Click on Dashboard button",
@@ -1985,7 +1882,7 @@ formatter.match({
   "location": "SignupDefination.user_Click_on_Dashboard_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user is on dashboard page",
@@ -1995,7 +1892,7 @@ formatter.match({
   "location": "SignupDefination.user_is_on_dashboard_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User click on View more of Total Sales box",
@@ -2005,7 +1902,7 @@ formatter.match({
   "location": "SignupDefination.user_click_on_View_more_of_Total_Sales_box()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user Navigates to orders page",
@@ -2015,7 +1912,7 @@ formatter.match({
   "location": "SignupDefination.user_Navigates_to_orders_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User click on Dashboard Button",
@@ -2025,7 +1922,7 @@ formatter.match({
   "location": "SignupDefination.user_click_on_Dashboard_Button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user is on the  Dashboard Page",
@@ -2035,7 +1932,7 @@ formatter.match({
   "location": "SignupDefination.user_is_on_the_Dashboard_Page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User click on View more of Total customers box",
@@ -2045,7 +1942,7 @@ formatter.match({
   "location": "SignupDefination.user_click_on_View_more_of_Total_customers_box()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user Navigates to Customers page",
@@ -2055,7 +1952,7 @@ formatter.match({
   "location": "SignupDefination.user_Navigates_to_Customers_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
@@ -2423,6 +2320,459 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenarioOutline({
+  "name": "Verify Telephone in Add button page",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Bug"
+    }
+  ]
+});
+formatter.step({
+  "name": "User click on add new button",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "user navigates to the customer details page",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "user enter \"\u003cTelephone\u003e\" in the field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user click on continue Button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "user navigates to the add products page",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "Telephone"
+      ]
+    },
+    {
+      "cells": [
+        "tyd563fygr"
+      ]
+    },
+    {
+      "cells": [
+        "ASDGRUTJY#$"
+      ]
+    },
+    {
+      "cells": [
+        "0000000etxdt"
+      ]
+    }
+  ]
+});
+formatter.background({
+  "name": "Verify  Login Functionality",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User is on Uniform Store Application",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SignupDefination.user_is_on_Uniform_Store_Application()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter username and password",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_enter_username_and_password()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on Login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SignupDefination.click_on_Login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User Navigates to the Dashboard",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_Navigates_to_the_Dashboard()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on Sales button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_Sales_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on the Order button under the sales Module",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_the_Order_button_under_the_sales_Module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify Telephone in Add button page",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Bug"
+    }
+  ]
+});
+formatter.step({
+  "name": "User click on add new button",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_add_new_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to the customer details page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_navigates_to_the_customer_details_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter \"tyd563fygr\" in the field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SignupDefination.user_enter_in_the_field(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefination.SignupDefination.user_enter_in_the_field(SignupDefination.java:1283)\r\n\tat ✽.user enter \"tyd563fygr\" in the field(file:src/test/java/Feature/Orders.feature:132)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user click on continue Button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_continue_Button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user navigates to the add products page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_navigates_to_the_add_products_page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Verify  Login Functionality",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User is on Uniform Store Application",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SignupDefination.user_is_on_Uniform_Store_Application()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter username and password",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_enter_username_and_password()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on Login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SignupDefination.click_on_Login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User Navigates to the Dashboard",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_Navigates_to_the_Dashboard()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on Sales button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_Sales_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on the Order button under the sales Module",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_the_Order_button_under_the_sales_Module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify Telephone in Add button page",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Bug"
+    }
+  ]
+});
+formatter.step({
+  "name": "User click on add new button",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_add_new_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to the customer details page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_navigates_to_the_customer_details_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter \"ASDGRUTJY#$\" in the field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SignupDefination.user_enter_in_the_field(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefination.SignupDefination.user_enter_in_the_field(SignupDefination.java:1283)\r\n\tat ✽.user enter \"ASDGRUTJY#$\" in the field(file:src/test/java/Feature/Orders.feature:132)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user click on continue Button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_continue_Button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user navigates to the add products page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_navigates_to_the_add_products_page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Verify  Login Functionality",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User is on Uniform Store Application",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SignupDefination.user_is_on_Uniform_Store_Application()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter username and password",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_enter_username_and_password()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Click on Login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SignupDefination.click_on_Login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User Navigates to the Dashboard",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_Navigates_to_the_Dashboard()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on Sales button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_Sales_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User click on the Order button under the sales Module",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_the_Order_button_under_the_sales_Module()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify Telephone in Add button page",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@Bug"
+    }
+  ]
+});
+formatter.step({
+  "name": "User click on add new button",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_add_new_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user navigates to the customer details page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_navigates_to_the_customer_details_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enter \"0000000etxdt\" in the field",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "SignupDefination.user_enter_in_the_field(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefination.SignupDefination.user_enter_in_the_field(SignupDefination.java:1283)\r\n\tat ✽.user enter \"0000000etxdt\" in the field(file:src/test/java/Feature/Orders.feature:132)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "user click on continue Button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "SignupDefination.user_click_on_continue_Button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user navigates to the add products page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SignupDefination.user_navigates_to_the_add_products_page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenarioOutline({
   "name": "Verify Recurring orders Login Functionality",
   "description": "",
   "keyword": "Scenario Outline",
@@ -2433,23 +2783,23 @@ formatter.scenarioOutline({
   ]
 });
 formatter.step({
-  "name": "User is on Uniform Store Application",
+  "name": "User is on Orders page of uniform store Application",
   "keyword": "Given "
 });
 formatter.step({
-  "name": "user enter username and password",
+  "name": "User  Click On dashboard Button",
   "keyword": "When "
 });
 formatter.step({
-  "name": "Click on Login button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "User Navigates to the Dashboard",
+  "name": "user navigates to the dashboard page",
   "keyword": "Then "
 });
 formatter.step({
-  "name": "User click on Sales button",
+  "name": "User Navigates to the Dashboard",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "user Click on the sales button",
   "keyword": "When "
 });
 formatter.step({
@@ -2594,55 +2944,54 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "User is on Uniform Store Application",
+  "name": "User is on Orders page of uniform store Application",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "SignupDefination.user_is_on_Uniform_Store_Application()"
+  "location": "SignupDefination.user_is_on_Orders_page_of_uniform_store_Application()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user enter username and password",
+  "name": "User  Click On dashboard Button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "SignupDefination.user_enter_username_and_password()"
+  "location": "SignupDefination.user_Click_On_dashboard_Button()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.fail(Assert.java:96)\r\n\tat StepDefination.SignupDefination.user_enter_username_and_password(SignupDefination.java:35)\r\n\tat ✽.user enter username and password(file:src/test/java/Feature/Orders.feature:139)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "Click on Login button",
-  "keyword": "And "
+  "name": "user navigates to the dashboard page",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "SignupDefination.click_on_Login_button()"
+  "location": "SignupDefination.user_navigates_to_the_dashboard_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User Navigates to the Dashboard",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.match({
   "location": "SignupDefination.user_Navigates_to_the_Dashboard()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "User click on Sales button",
+  "name": "user Click on the sales button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "SignupDefination.user_click_on_Sales_button()"
+  "location": "SignupDefination.user_Click_on_the_sales_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User click on the  recurring Order button under the sales Module",
@@ -2652,7 +3001,7 @@ formatter.match({
   "location": "SignupDefination.user_click_on_the_recurring_Order_button_under_the_sales_Module()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User is on Recurring orders Page",
@@ -2662,7 +3011,7 @@ formatter.match({
   "location": "SignupDefination.user_is_on_Recurring_orders_Page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User Enter \"543\" in  Recurring Id Field",
@@ -2672,7 +3021,7 @@ formatter.match({
   "location": "SignupDefination.user_Enter_in_Recurring_Id_Field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User Enter \"543\" in order Id field",
@@ -2682,7 +3031,7 @@ formatter.match({
   "location": "SignupDefination.user_Enter_in_order_Id_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user enter \"T210928456289627498378\" in payment Reference field",
@@ -2692,7 +3041,7 @@ formatter.match({
   "location": "SignupDefination.user_enter_in_payment_Reference_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user enter \"nazma\" name in customer field",
@@ -2702,7 +3051,7 @@ formatter.match({
   "location": "SignupDefination.user_enter_name_in_customer_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user update a  \"Pending\" in the status field",
@@ -2712,7 +3061,7 @@ formatter.match({
   "location": "SignupDefination.user_update_a_in_the_status_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user enter date \"2019-09-15\" in the date added field",
@@ -2722,7 +3071,7 @@ formatter.match({
   "location": "SignupDefination.user_enter_date_in_the_date_added_field(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "User click on filter button",
@@ -2732,7 +3081,7 @@ formatter.match({
   "location": "SignupDefination.user_click_on_filter_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.after({
   "status": "passed"
